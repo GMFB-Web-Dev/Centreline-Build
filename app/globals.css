@@ -104,7 +104,7 @@ img { max-width: 100%; }
 .services-menu { position: relative; height: 100%; display: flex; align-items: center; }
 .services-menu summary { height: 100%; display: flex; align-items: center; gap: 7px; cursor: pointer; list-style: none; }
 .services-menu summary::-webkit-details-marker { display: none; }
-.chevron { font-size: 18px; transition: transform .2s ease; }
+.chevron { width: 16px; height: 16px; flex: 0 0 auto; align-self: center; transition: transform .2s ease; }
 .services-menu[open] .chevron { transform: rotate(180deg); }
 .service-dropdown {
   position: absolute;
