@@ -61,7 +61,9 @@ export async function POST(request: Request) {
   }
 
   const resend = new Resend(apiKey);
-  const from = process.env.RESEND_FROM_EMAIL || "Centreline Build <onboarding@resend.dev>";
+  // resend.dev is restricted to the Resend account owner's address. Use the
+  // verified Weblaunch sending domain until Centreline's own domain is verified.
+  const from = process.env.RESEND_FROM_EMAIL || "Centreline Build <centreline-build@weblaunch.co.nz>";
   const to = destination.split(",").map((address) => address.trim()).filter(Boolean);
   const emailData = {
     from,
